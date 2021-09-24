@@ -25,6 +25,11 @@ public class OrganizerServiceImpl implements OrganizerService{
     }
 
     @Override
+    public Organizer getOrganizer(Long id) {
+        return organizerDao.getOrganizer(id);
+    }
+
+    @Override
     public Page<Organizer> getOrganizer(Integer page, Integer pageSize) {
         return organizerDao.getOrganizer(PageRequest.of(page,pageSize));
     }

@@ -10,5 +10,6 @@ import java.util.Optional;
 public interface OrganizerDao {
     Page<Organizer> getOrganizer(Pageable pageRequest);
     Organizer save(Organizer organizer);
+    Organizer getOrganizer(Long id);
     Optional<Organizer> findById(Long id);
 }
