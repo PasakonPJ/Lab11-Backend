@@ -20,6 +20,11 @@ public class OrganizerServiceImpl implements OrganizerService{
     }
 
     @Override
+    public Organizer save(Organizer organizer) {
+       return  organizerDao.save(organizer);
+    }
+
+    @Override
     public Page<Organizer> getOrganizer(Integer page, Integer pageSize) {
         return organizerDao.getOrganizer(PageRequest.of(page,pageSize));
     }
